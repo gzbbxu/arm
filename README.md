@@ -100,6 +100,33 @@ IDA:
 
 
 
+启动调试
+① push IDA 目录下的android_server 到手机中的./data/local/tmp 中
+
+②  启动服务端
+
+chmod 777 android_server 
+
+③ 启动android_server
+
+./android_server 
+
+④ 端口转发
+
+adb forward tcp:pc_port tcp:obile_port 
+
+⑤ ida 调试端口设置
+
+Debugger->Process Option->HostNmae:localhost Port:port
+
+⑥ 程序启动
+
+adb shell am start -D -n PackageName/ActivityName
+
+⑦ ida 挂接
+
+
+
 
 
 
